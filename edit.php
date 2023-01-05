@@ -32,20 +32,21 @@
       <label for="password" class="join_label">비밀번호</label>
       <div>
         <input type="password" name="password" id="password">
-        <span class="err_password"></span>
+        <div class="err_password"></div>
       </div>
       <label for="password_ch" class="join_label">비밀번호 확인</label>
       <div>
         <input type="password" name="password_ch" id="password_ch">
-        <span class="err_password_ch"></span>
+        <div class="err_password_ch"></div>
       </div>
       <label for="name" class="join_label">이름</label>
       <div>
         <input type="text" name="name" id="name" value="<?=$array['name']?>">
-        <span class="err_name"></span>
+        <div class="err_name"></div>
       </div>
       <input type="submit" value="수정" class="form_btn">
       <button type="button" class="form_btn"onclick="history.back()">취소</button>
+      <div class="delete"><a href="delete_process.php" onclick="return confirm('정말 탈퇴하시겠습니까?');">회원탈퇴</a></div>
     </form>
   </div>
 </div>
