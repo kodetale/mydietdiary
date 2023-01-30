@@ -41,7 +41,7 @@
         while($array = mysqli_fetch_array($result)) {
       ?>
       
-        <p><input type="text" name="food[]" id="text" value="<?=$array['food']?>" required> <input type="text" name="kcal[]" id="num" value="<?=$array['kcal']?>" required> kcal <input type='image' src='../lib/img/minus.png' class='minus_btn' onclick='remove(this)'></p>
+        <p><input type="text" name="food[]" id="text" value="<?=$array['food']?>" required> <input type="text" name="kcal[]" id="num" pattern="^[0-9]*" value="<?=$array['kcal']?>" required> kcal <input type='image' src='../lib/img/minus.png' class='minus_btn' onclick='remove(this)'></p>
     
       <?php
         }
@@ -61,7 +61,7 @@
 const add_textbox = () => {
   const box = document.getElementById("box");
   const newP = document.createElement('p');
-  newP.innerHTML = "<input type='text' name=food[] id='text' required> <input type='text' name=kcal[] id='num' required> kcal <input type='image' src='../lib/img/minus.png' class='minus_btn' onclick='remove(this)'>";
+  newP.innerHTML = "<input type='text' name=food[] id='text' required> <input type='text' name=kcal[] id='num' pattern='^[0-9]*' required> kcal <input type='image' src='../lib/img/minus.png' class='minus_btn' onclick='remove(this)'>";
   box.appendChild(newP);
 }
 

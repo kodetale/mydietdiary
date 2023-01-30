@@ -1,4 +1,4 @@
-/* 해당 #3f51b5 색상코드 변경 시 디자인 일괄적용 */
+/* 해당 #e0e2f7 색상코드 변경 시 디자인 일괄적용 */
 
 /* datepicker Style */
 .ui-datepicker { 
@@ -21,8 +21,8 @@
   position: relative; 
   padding: 6px 0 36px 0; 
   border: 0; 
-  background: #3f51b5; 
-  color: #fff; 
+  background: #e0e2f7; 
+  color: #1b1b1b; 
   border-radius: 0; 
 }
 
@@ -30,7 +30,7 @@
   width: 70px; 
   height: 26px; 
   line-height: 26px; 
-  background: rgba(0,0,0,0.15) url(/diary/lib/img/arrow-button.png) 100% -27px no-repeat; 
+  background: rgba(0,0,0,0.15) url(../img/arrow-button.png) 100% -27px no-repeat; 
   margin: 0 4px; 
   padding: 0 6px; 
   border: 0; 
@@ -46,7 +46,7 @@
 }
 
 .ui-datepicker select.ui-datepicker-month:hover, .ui-datepicker select.ui-datepicker-year:hover { 
-  background: rgba(0,0,0,0.3) url(/diary/lib/img/arrow-button.png) 100% -27px no-repeat; 
+  background: rgba(0,0,0,0.3) url(../img/arrow-button.png) 100% -27px no-repeat; 
 }
 
 .ui-datepicker select::-ms-expand {
@@ -86,10 +86,10 @@ display: none; /* 화살표 없애기 for IE10, 11*/
   display: block; 
   padding: 0; 
   width: 14.2857%; 
-  color: #fff; 
+  color: #1b1b1b; 
   font-size:11px; 
   letter-spacing:1px; 
-  opacity: 0.6 
+  opacity: 0.8 
 }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next { 
@@ -111,7 +111,7 @@ display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .ui-datepicker .ui-datepicker-prev .ui-icon { 
-  background: url(/diary/lib/img/arrow-button.png) 0 0 no-repeat; 
+  background: url(../img/arrow-button.png) 0 0 no-repeat; 
 }
 
 .ui-datepicker .ui-datepicker-next { 
@@ -124,7 +124,7 @@ display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .ui-datepicker .ui-datepicker-next .ui-icon { 
-  background: url(/diary/lib/img/arrow-button.png) -16px 0 no-repeat; 
+  background: url(../img/arrow-button.png) -16px 0 no-repeat; 
 }
 
 .ui-datepicker .ui-state-default { 
@@ -149,13 +149,13 @@ display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .ui-datepicker-today .ui-state-default { 
-  color: #3f51b5; 
+  color: #8c95f2; 
   font-weight: bold; 
 }
 
 .ui-datepicker-current-day .ui-state-default { 
-  background: #3f51b5 !important; 
-  color: #fff; 
+  background: #e0e2f7 !important; 
+  color: #1b1b1b; 
   font-weight: bold; 
 }
 
@@ -165,8 +165,9 @@ display: none; /* 화살표 없애기 for IE10, 11*/
 }
 
 .ui-datepicker-buttonpane button[data-handler="today"] { 
-  color: #3f51b5; 
-  opacity: 0.75; 
+  color: #8c95f2; 
+  opacity: 0.75;
+  font-weight: bold;
 }
 
 /* ie add Style */

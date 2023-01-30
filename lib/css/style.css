@@ -147,6 +147,7 @@ p {
   margin-top: 10px; 
   margin-left: 210px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .wrap .form_wrap .join_label {
@@ -160,6 +161,11 @@ p {
   margin-top: 4px;
   margin-bottom: 3px;
   font-size: 20px;
+}
+
+#err {
+  margin-bottom: 10px;
+  color: #FF5576;
 }
 
 .delete {

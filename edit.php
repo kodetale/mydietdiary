@@ -8,6 +8,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./lib/css/style.css">
+  <title>My Diet Diary</title>
 </head>
 
 <body>
@@ -32,17 +33,17 @@
       <label for="password" class="join_label">비밀번호</label>
       <div>
         <input type="password" name="password" id="password">
-        <div class="err_password"></div>
+        <div id="err" class="err_password"></div>
       </div>
       <label for="password_ch" class="join_label">비밀번호 확인</label>
       <div>
         <input type="password" name="password_ch" id="password_ch">
-        <div class="err_password_ch"></div>
+        <div id="err" class="err_password_ch"></div>
       </div>
       <label for="name" class="join_label">이름</label>
       <div>
         <input type="text" name="name" id="name" value="<?=$array['name']?>">
-        <div class="err_name"></div>
+        <div id="err" class="err_name"></div>
       </div>
       <input type="submit" value="수정" class="form_btn">
       <button type="button" class="form_btn"onclick="history.back()">취소</button>

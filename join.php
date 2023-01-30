@@ -4,6 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./lib/css/style.css">
+  <title>My Diet Diary</title>
 </head>
 
 <body>

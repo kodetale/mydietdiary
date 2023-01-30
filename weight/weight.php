@@ -13,7 +13,7 @@ session_start();
   <link rel="stylesheet" href="../lib/css/datepicker.css">
   <link rel="stylesheet" href="../lib/css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Document</title>
+  <title>몸무게 기록</title>
 </head>
 
 <body>
