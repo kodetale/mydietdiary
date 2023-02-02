@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Bareun_hipi';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_01@1.0/Bareun_hipi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  background-image: url(../img/background.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.modal * {
+  font-family: 'Bareun_hipi';
+  font-weight: bold;
+}
+
+.modal .btn {
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  font-weight: bold;
+}
+
+.dimLayer {
+  display: block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  z-index: 9998;
+}
+
+.modal {
+  width: 470px;
+  height: 160px;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.modal-section{
+  background: #ffffff;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+}
+
+.menu_msg {
+  font-size: 20px;
+  margin-block-start: 12px;
+  margin-block-end: 16px;
+}
+
+.alert_btn {
+  width: 80px;
+  height: 40px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 5px;
+  background: #e0e2f7;
+  box-shadow: 2px 2px #b6bcf7;
+  cursor: pointer;
+}

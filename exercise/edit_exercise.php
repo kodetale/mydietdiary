@@ -6,8 +6,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../lib/css/style.css">
+  <?php include '../lib/include/head.php' ?>
   <title>운동 일기</title>
 </head>
 
@@ -16,6 +15,7 @@
 <?php
   include '../lib/include/top.php';
   include '../lib/include/sql_conn.php';
+  include '../lib/include/modal.php';
   
   $pk = $_SESSION["pk"];
   $date = $_POST['date'];
@@ -63,6 +63,7 @@
 </div>
 
 <script type="text/javascript" src="../lib/js/logout.js"></script>
+<script type="text/javascript" src="../lib/js/alert.js"></script>
 <script>
 const add_textbox = () => {
   const box = document.getElementById("box");

@@ -2,12 +2,12 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./lib/css/style.css">
+  <?php include './lib/include/head.php' ?>
   <title>My Diet Diary</title>
 </head>
 
 <body>
+<?php include './lib/include/modal.php' ?>
 <div id="index_wrap" class="wrap">
   <div class="form_wrap">
     <img src="./lib/img/logo.png" width="260px" height="160px">
@@ -35,6 +35,7 @@
 </div>
   
 <script src="./lib/js/join.js"></script>
+<script src="./lib/js/alert.js"></script>
 </body>
 
 </html>

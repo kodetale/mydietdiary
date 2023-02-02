@@ -108,8 +108,8 @@ p {
   border: 0;
   border-radius: 5px;
   box-sizing: content-box;
-  background: #fccbde;
-  box-shadow: 2px 2px #ff85c1;
+  background: #e0e2f7;
+  box-shadow: 2px 2px #b6bcf7;
   cursor: pointer;
   font-weight: bold;
 }
@@ -128,8 +128,8 @@ p {
   border: 0;
   border-radius: 5px;
   box-sizing: content-box;
-  background: #fccbde;
-  box-shadow: 1px 1px #ff85c1;
+  background: #e0e2f7;
+  box-shadow: 2px 2px #b6bcf7;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -171,6 +171,7 @@ p {
 .delete {
   margin-top: 25px;
   text-align: right;
+  cursor: pointer;
 }
 
 /*diary 전체 적용*/
@@ -307,7 +308,7 @@ p {
 
 /*exercise.php*/
 #exercise_block {
-  background-color:  #cbdbfc;
+  background-color: #cbdbfc;
   box-shadow: 3px 3px #99bcf2;
 }
 

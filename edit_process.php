@@ -1,3 +1,19 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./lib/css/modal.css">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <?php 
+      include './lib/include/modal.php';
+    ?>
+
+  </body>
+
+  <script src="./lib/js/alert.js"></script>
+
 <?php
   session_start();
   
@@ -14,9 +30,15 @@
   }
   
   mysqli_query($conn, $sql);
+
+  $_SESSION['name'] = $name;
 ?>
 
 <script>
-  alert("정보가 수정되었습니다.")
-  history.go(-2);
-</script>
+    $(".modal_close").on("click", function () {
+      history.go(-2);
+    });
+    action_popup.alert("정보가 수정되었습니다.");
+  </script>
+</html>
+

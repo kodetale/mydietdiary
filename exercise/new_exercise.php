@@ -6,13 +6,7 @@ session_start();
 <html>
 
 <head>
-	<meta charset="UTF-8">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery.min.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="../lib/css/datepicker.css">
-  <link rel="stylesheet" href="../lib/css/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?php include '../lib/include/head.php' ?>
   <title>운동 일기</title>
 </head>
 
@@ -20,6 +14,7 @@ session_start();
 
 <?php
   include '../lib/include/top.php';
+  include '../lib/include/modal.php';
   $date = $_GET['date'];
 ?>
 
@@ -49,6 +44,7 @@ session_start();
 </div>
 
 <script type="text/javascript" src="../lib/js/logout.js"></script>
+<script type="text/javascript" src="../lib/js/alert.js"></script>
 <script>
 const add_textbox = () => {
   const box = document.getElementById("box");

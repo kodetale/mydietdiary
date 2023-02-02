@@ -1,35 +1,67 @@
-<?php
-  include './lib/include/sql_conn.php';
+<html>
+  <head>
+    <link rel="stylesheet" href="./lib/css/modal.css">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+  </head>
 
-  $id = $_POST['id'];
-  $password = $_POST['password'];
+  <body>
 
-  $sql = "SELECT * FROM user WHERE id ='{$id}'";
-  $result = mysqli_query($conn, $sql);
-  $row = mysqli_fetch_array($result);
+  <?php 
+    include './lib/include/modal.php';
+  ?>
   
-	$hashedPassword = $row['password'];
-  $passwordResult = password_verify($password, $hashedPassword);
+  </body>
 
-  if ($passwordResult === true) {
-    session_start();
-    $_SESSION['pk'] = $row['pk'];
-    $_SESSION['name'] = $row['name'];
-?>
+  <script src="./lib/js/alert.js"></script>
 
-<script>
-	location.href = "./diet/diet.php?date=<?=date("Y/m/d");?>";
-</script>
+  <?php
+    include './lib/include/sql_conn.php';
 
-<?php
-	} else {
-?>
+    $id = $_POST['id'];
+    $password = $_POST['password'];
 
-<script>
-	alert("아이디 또는 비밀번호를 확인해주세요.");
-	location.href = "index.php";
-</script>
+    $sql = "SELECT * FROM user WHERE id ='{$id}'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_array($result);
+  
+    if(isset($row)) {
+      $hashedPassword = $row['password'];
+      $passwordResult = password_verify($password, $hashedPassword);
 
-<?php
-	}
-?>
+      if ($passwordResult === true) {
+        session_start();
+        $_SESSION['pk'] = $row['pk'];
+        $_SESSION['name'] = $row['name'];
+  ?>
+
+    <script>
+      location.href = "./diet/diet.php?date=<?=date("Y/m/d");?>";
+    </script>
+
+    <?php
+      } else {
+    ?>
+
+    <script>
+      $(".modal_close").on("click", function () {
+        location.href = "index.php";
+      });
+      action_popup.alert("아이디와 비밀번호를 다시 확인해주세요.");
+    </script>
+
+    <?php
+        }
+      } else { 
+    ?>
+
+    <script>
+      $(".modal_close").on("click", function () {
+        location.href = "index.php";
+      });
+      action_popup.alert("아이디와 비밀번호를 다시 확인해주세요.");
+    </script>
+
+    <?php
+      }
+    ?>
+</html>

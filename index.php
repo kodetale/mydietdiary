@@ -6,12 +6,16 @@ session_start();
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./lib/css/style.css">
+  <?php include './lib/include/head.php' ?>
   <title>My Diet Diary</title>
 </head>
 
 <body>
+
+<?php 
+  include './lib/include/modal.php';
+?>
+
 <div id="index_wrap" class="wrap">
   <div class="index">
     <img class="logo" src="./lib/img/logo.png" width="350px" height="215px">
@@ -43,13 +47,15 @@ session_start();
   </div>
 </div>
 
+<script src="./lib/js/alert.js"></script>
 <script type="text/javascript">
   function logout() {
-  const data = confirm("로그아웃 하시겠습니까?");
-    if (data) {
+  action_popup.confirm("로그아웃 하시겠습니까?", function (res) {
+    if (res) {
       location.href = "./logout_process.php";
     }
-  }
+  })
+}
 </script>
 
 </body>

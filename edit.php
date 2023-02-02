@@ -6,8 +6,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./lib/css/style.css">
+  <?php include './lib/include/head.php' ?>
   <title>My Diet Diary</title>
 </head>
 
@@ -15,6 +14,7 @@
 
 <?php
   include './lib/include/sql_conn.php';
+  include './lib/include/modal.php';
   
   $pk = $_SESSION["pk"];
   $sql = "select * from user where pk = '{$pk}'";
@@ -47,12 +47,22 @@
       </div>
       <input type="submit" value="수정" class="form_btn">
       <button type="button" class="form_btn"onclick="history.back()">취소</button>
-      <div class="delete"><a href="delete_process.php" onclick="return confirm('정말 탈퇴하시겠습니까?');">회원탈퇴</a></div>
+      <div class="delete" onclick="del_confirm()">회원탈퇴</div>
     </form>
   </div>
 </div>
 
 <script src="./lib/js/edit.js"></script>
+<script src="./lib/js/alert.js"></script>
+<script>
+  function del_confirm() {
+    action_popup.confirm("정말 탈퇴하시겠습니까?", function (res) {
+      if (res) {
+        location.href = "delete_process.php";
+      }
+    })
+  }
+</script>
 </body>
 
 </html>
