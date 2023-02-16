@@ -44,7 +44,7 @@ session_start();
 const add_textbox = () => {
   const box = document.getElementById("box");
   const newP = document.createElement('p');
-  newP.innerHTML = "<input type='text' name=food[] id='text' required> <input type='text' name=kcal[] id='num' pattern='^[0-9]*' required> kcal <input type='image' src='../lib/img/minus.png' class='minus_btn' onclick='remove(this)'>";
+  newP.innerHTML = "<input type='text' name=food[] id='text' required> <input type='text' name=kcal[] id='num' pattern='^[0-9]*' required> kcal <input type='button' class='minus_btn' onclick='remove(this)'>";
   box.appendChild(newP);
 }
         

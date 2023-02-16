@@ -49,7 +49,7 @@ session_start();
 const add_textbox = () => {
   const box = document.getElementById("box");
   const newP = document.createElement('p');
-  newP.innerHTML = "<input type='text' name=exercise[] id='text' required> <input type='text' name=num[] id='num' pattern='^[0-9]*' required> <select name='unit[]' class='select'><option>분</option> <option>개</option></select> <input type='image' src='../lib/img/minus.png' class='e_minus_btn' onclick='remove(this)'>";
+  newP.innerHTML = "<input type='text' name=exercise[] id='text' required> <input type='text' name=num[] id='num' pattern='^[0-9]*' required> <select name='unit[]' class='select'><option>분</option> <option>개</option></select> <input type='button' class='e_minus_btn' onclick='remove(this)'>";
   box.appendChild(newP);
 }
         
