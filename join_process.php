@@ -16,6 +16,7 @@
 
   <?php
     include './lib/include/sql_conn.php';
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 	
     $hashedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -37,7 +38,7 @@
   </script>
 
   <?php
-    } catch(mysqli_sql_exception) {
+    } catch(mysqli_sql_exception $e) {
   ?>
 
   <script>
